@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+        x:Class="AutoCompressor.MainWindow"
+        Title="AutoCompressor">
+	
+		<!-- Usando StackPanel com Margin -->
+		<StackPanel Margin="30,0" Spacing="25">
+
+			<!-- Cabeçalho -->
+			<TextBlock Text="Welcome to Auto Compressor!"
+					   FontSize="20"
+					   FontWeight="Bold"
+					   HorizontalAlignment="Center"
+					   Margin="0,0,0,20"/>
+
+			<!-- Input Folder -->
+			<TextBlock Text="Input folder:" FontSize="14"/>
+			<TextBox x:Name="EntryInputFolder" Watermark="Type the path of input folder"/>
+
+			<!-- Output Folder -->
+			<TextBlock Text="Output folder:" FontSize="14"/>
+			<TextBox x:Name="EntryOutputFolder" Watermark="Type the path of output folder"/>
+
+			<!-- Status -->
+			<TextBlock x:Name="lblStatus" Text="Status message here"
+					   Foreground="Green"
+					   IsVisible="True"/>
+
+			<!-- Botão com evento Clicked -->
+			<Button Content="Save changes" Click="OnChangeFoldersClicked" HorizontalAlignment="Center" />
+
+		</StackPanel>
+
+</Window>
