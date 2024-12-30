@@ -1,40 +1,79 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Platform;
+using System.IO;
 
 namespace AutoCompressor
 {
     public partial class MainWindow : Window
     {
+        private AppConfig _config;
+
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        public void Initialize(AppConfig config)
+        {
+            this.Width = 500;
+            this.Height = 500;
+
+            _config = config;
+
+            if (!string.IsNullOrEmpty(_config.inputFolder)) EntryInputFolder.Text = _config.inputFolder;
+            if (!string.IsNullOrEmpty(_config.outputFolder)) EntryOutputFolder.Text = _config.outputFolder;
+        }
+
+        private async void OnPickInputFolderClicked(object? sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFolderDialog()
+            {
+                Title = "Select Input Folder"
+            };
+
+            var result = await dialog.ShowAsync(this);
+
+            if (!string.IsNullOrEmpty(result))
+            {
+                this.FindControl<TextBox>("EntryInputFolder").Text = result;
+            }
+        }
+
+        private async void OnPickOutputFolderClicked(object? sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFolderDialog()
+            {
+                Title = "Select Output Folder"
+            };
+
+            var result = await dialog.ShowAsync(this);
+
+            if (!string.IsNullOrEmpty(result))
+            {
+                this.FindControl<TextBox>("EntryOutputFolder").Text = result;
+            }
         }
 
         private void OnChangeFoldersClicked(object? sender, RoutedEventArgs e)
         {
-            // Obtenha os valores dos TextBoxes
-            var inputFolder = this.FindControl<TextBox>("EntryInputFolder").Text;
-            var outputFolder = this.FindControl<TextBox>("EntryOutputFolder").Text;
-
-            // Validação ou processamento (exemplo)
-            if (string.IsNullOrWhiteSpace(inputFolder) || string.IsNullOrWhiteSpace(outputFolder))
+            if (string.IsNullOrEmpty(EntryInputFolder.Text) || string.IsNullOrEmpty(EntryOutputFolder.Text))
             {
-                this.FindControl<TextBlock>("lblStatus").Text = "Please fill in both folders.";
-                this.FindControl<TextBlock>("lblStatus").Foreground = Avalonia.Media.Brushes.Red;
+                lblStatus.Text = "Error: Please fill the fields above.";
+                lblStatus.Foreground = Avalonia.Media.Brushes.Red;
+                lblStatus.IsVisible = true;
+                return;
             }
-            else
-            {
-                this.FindControl<TextBlock>("lblStatus").Text = "Folders saved successfully!";
-                this.FindControl<TextBlock>("lblStatus").Foreground = Avalonia.Media.Brushes.Green;
 
-                // Aqui você pode salvar as pastas na configuração
-                var config = new AppConfig
-                {
-                    InputFolder = inputFolder,
-                    OutputFolder = outputFolder
-                };
-                config.Save();
-            }
+            _config.inputFolder = EntryInputFolder.Text.Trim();   
+            _config.outputFolder = EntryOutputFolder.Text.Trim(); 
+
+            _config.Save();
+
+            lblStatus.Text = "Settings have been saved.";
+            lblStatus.Foreground = Avalonia.Media.Brushes.Green;
+            lblStatus.IsVisible = true;
         }
     }
 }

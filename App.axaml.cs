@@ -13,9 +13,14 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+
+        var config = AppConfig.Load();
+
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+            var mainWindow = new MainWindow(); 
+            mainWindow.Initialize(config); 
+            desktop.MainWindow = mainWindow;
         }
 
         base.OnFrameworkInitializationCompleted();
