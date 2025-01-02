@@ -69,11 +69,16 @@ namespace AutoCompressor
             _config.inputFolder = EntryInputFolder.Text.Trim();   
             _config.outputFolder = EntryOutputFolder.Text.Trim(); 
 
-            _config.Save();
+            _config.Save();                
 
             lblStatus.Text = "Settings have been saved.";
             lblStatus.Foreground = Avalonia.Media.Brushes.Green;
             lblStatus.IsVisible = true;
+        }
+
+        private void OnChangeTab(object? sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

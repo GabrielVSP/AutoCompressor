@@ -6,28 +6,51 @@
         x:Class="AutoCompressor.MainWindow"
         Title="AutoCompressor">
 	
-		<StackPanel Margin="30,0" Spacing="25">
+		<StackPanel>
 
-			<TextBlock Text="Welcome to Auto Compressor!"
-					   FontSize="20"
-					   FontWeight="Bold"
-					   HorizontalAlignment="Center"
-					   Margin="0,0,0,20"/>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="10">
 
-			<TextBlock Text="Input folder:" FontSize="14"/>
-			<TextBox x:Name="EntryInputFolder" Watermark="Type the path of input folder"/>
-			<Button Content="Select Input Folder" Click="OnPickInputFolderClicked"/>
+				<Button Content="Logs" HorizontalAlignment="Left" Click="OnChangeTab" />
+				<Button Content="Settings" HorizontalAlignment="Left" Click="OnChangeTab" />
 
-			<TextBlock Text="Output folder:" FontSize="14"/>
-			<TextBox x:Name="EntryOutputFolder" Watermark="Type the path of output folder"/>
-			<Button Content="Select Output Folder" Click="OnPickOutputFolderClicked"/>
+			</StackPanel>
 
-			<TextBlock x:Name="lblStatus" Text="Status message here"
-					   Foreground="Green"
-					   IsVisible="True"/>
+			<StackPanel x:Name="LogsTab">
 
-			<Button Content="Save changes" Click="OnChangeFoldersClicked" HorizontalAlignment="Center" />
+				<TextBlock Text="sTATUS"
+						   FontSize="20"
+						   FontWeight="Bold"
+						   HorizontalAlignment="Center"
+						   Margin="0,0,0,20"/>
+				
+			</StackPanel>
+
+			<StackPanel Margin="30,0" Spacing="25" x:Name="SettingsTab" IsVisible="False">
+
+				<TextBlock Text="Welcome to Auto Compressor!"
+						   FontSize="20"
+						   FontWeight="Bold"
+						   HorizontalAlignment="Center"
+						   Margin="0,0,0,20"/>
+
+				<TextBlock Text="Input folder:" FontSize="14"/>
+				<TextBox x:Name="EntryInputFolder" Watermark="Type the path of input folder"/>
+				<Button Content="Select Input Folder" Click="OnPickInputFolderClicked"/>
+
+				<TextBlock Text="Output folder:" FontSize="14"/>
+				<TextBox x:Name="EntryOutputFolder" Watermark="Type the path of output folder"/>
+				<Button Content="Select Output Folder" Click="OnPickOutputFolderClicked"/>
+
+				<TextBlock x:Name="lblStatus" Text="Status message here"
+						   Foreground="Green"
+						   IsVisible="False"/>
+
+				<Button Content="Save changes" Click="OnChangeFoldersClicked" HorizontalAlignment="Center" />
+				
+			</StackPanel>
 
 		</StackPanel>
+
+	
 
 </Window>
