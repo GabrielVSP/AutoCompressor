@@ -11,8 +11,11 @@ namespace AutoCompressor
         static public void Compress(string inputPath, string outputPath)
         {
 
+            Logs.AddLog("void");
+
             var inputFile = new MediaFile { Filename = inputPath };
             var outputFile = new MediaFile { Filename = outputPath };
+            
 
             try
             {

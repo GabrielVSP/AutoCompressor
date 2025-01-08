@@ -13,6 +13,7 @@ namespace AutoCompressor
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
+
             if (!Directory.Exists(folderToTrack))
                 Directory.CreateDirectory(folderToTrack);
 

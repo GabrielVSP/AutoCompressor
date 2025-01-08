@@ -1,6 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Platform;
+using Avalonia.Threading;
 using System.IO;
 
 namespace AutoCompressor
@@ -12,6 +13,17 @@ namespace AutoCompressor
         public MainWindow()
         {
             InitializeComponent();
+            Logs.onLogAdded += AddLog;
+        }
+
+       
+        public void AddLog(string log)
+        {
+            
+            Dispatcher.UIThread.InvokeAsync(() =>
+            {
+                LogsText.Text = log;
+            });
 
         }
 
@@ -78,6 +90,9 @@ namespace AutoCompressor
 
         private void OnChangeTab(object? sender, RoutedEventArgs e)
         {
+
+            LogsTab.IsVisible = !LogsTab.IsVisible;
+            SettingsTab.IsVisible = !SettingsTab.IsVisible;
 
         }
     }

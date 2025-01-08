@@ -8,7 +8,7 @@
 	
 		<StackPanel>
 
-			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="10">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
 
 				<Button Content="Logs" HorizontalAlignment="Left" Click="OnChangeTab" />
 				<Button Content="Settings" HorizontalAlignment="Left" Click="OnChangeTab" />
@@ -17,7 +17,13 @@
 
 			<StackPanel x:Name="LogsTab">
 
-				<TextBlock Text="sTATUS"
+				<TextBlock Text="Logs"
+						   FontSize="20"
+						   FontWeight="Bold"
+						   HorizontalAlignment="Center"
+						   Margin="0,0,0,20"/>
+
+				<TextBlock x:Name="LogsText"
 						   FontSize="20"
 						   FontWeight="Bold"
 						   HorizontalAlignment="Center"
@@ -27,25 +33,22 @@
 
 			<StackPanel Margin="30,0" Spacing="25" x:Name="SettingsTab" IsVisible="False">
 
-				<TextBlock Text="Welcome to Auto Compressor!"
-						   FontSize="20"
-						   FontWeight="Bold"
-						   HorizontalAlignment="Center"
-						   Margin="0,0,0,20"/>
-
 				<TextBlock Text="Input folder:" FontSize="14"/>
 				<TextBox x:Name="EntryInputFolder" Watermark="Type the path of input folder"/>
 				<Button Content="Select Input Folder" Click="OnPickInputFolderClicked"/>
 
 				<TextBlock Text="Output folder:" FontSize="14"/>
-				<TextBox x:Name="EntryOutputFolder" Watermark="Type the path of output folder"/>
-				<Button Content="Select Output Folder" Click="OnPickOutputFolderClicked"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">					
+					<TextBox x:Name="EntryOutputFolder" Watermark="Type the path of output folder"/>
+					<Button Content="Select Output Folder" Width="150"
+            Height="40"  Click="OnPickOutputFolderClicked"/>
+				</StackPanel>
 
 				<TextBlock x:Name="lblStatus" Text="Status message here"
 						   Foreground="Green"
 						   IsVisible="False"/>
 
-				<Button Content="Save changes" Click="OnChangeFoldersClicked" HorizontalAlignment="Center" />
+				<Button Content="Save changes" Click="OnChangeFoldersClicked" HorizontalAlignment="Right" />
 				
 			</StackPanel>
 
