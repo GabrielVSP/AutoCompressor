@@ -9,14 +9,15 @@ namespace AutoCompressor
 {
     class Program
     {
+            
         [STAThread]
         public static async Task Main(string[] args)
         {
             //AttachConsole();
-
             var host = Host.CreateDefaultBuilder(args)
                 .ConfigureServices((_, services) =>
                 {
+                    services.Configure<AppConfig>(_.Configuration.GetSection("AppConfig"));
                     services.AddHostedService<TrackingService>();
                 })
                 .Build();

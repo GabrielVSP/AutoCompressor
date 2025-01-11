@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Platform;
 using Avalonia.Threading;
+using System;
 using System.IO;
 
 namespace AutoCompressor
@@ -22,7 +23,7 @@ namespace AutoCompressor
             
             Dispatcher.UIThread.InvokeAsync(() =>
             {
-                LogsText.Text = log;
+                LogsText.Text += log + Environment.NewLine;
             });
 
         }

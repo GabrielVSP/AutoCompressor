@@ -11,12 +11,28 @@
       "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\compressor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:compressor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\trackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:trackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|c:\\users\\gabri\\documents\\github\\autocompressor\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB5B8E1-3FAE-445B-9856-1D3C50281D5D}|AutoCompressor.csproj|solutionrelative:app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,32 +42,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\MainWindow.axaml",
-              "RelativeDocumentMoniker": "MainWindow.axaml",
-              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\MainWindow.axaml",
-              "RelativeToolTip": "MainWindow.axaml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-08T16:09:48.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Compressor.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Compressor.cs",
-              "RelativeDocumentMoniker": "Compressor.cs",
-              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Compressor.cs",
-              "RelativeToolTip": "Compressor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "App.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\App.axaml.cs",
+              "RelativeDocumentMoniker": "App.axaml.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\App.axaml.cs",
+              "RelativeToolTip": "App.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T16:05:33.632Z",
+              "WhenOpened": "2025-01-11T17:20:50.77Z",
               "EditorCaption": ""
             },
             {
@@ -62,20 +65,85 @@
               "RelativeDocumentMoniker": "MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\MainWindow.axaml.cs",
               "RelativeToolTip": "MainWindow.axaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T16:01:09.486Z",
+              "WhenOpened": "2025-01-11T17:19:57.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TrackingService.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\TrackingService.cs",
+              "RelativeDocumentMoniker": "TrackingService.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\TrackingService.cs",
+              "RelativeToolTip": "TrackingService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwC0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T16:49:59.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T16:49:10.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppConfig.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\AppConfig.cs",
+              "RelativeDocumentMoniker": "AppConfig.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\AppConfig.cs",
+              "RelativeToolTip": "AppConfig.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T16:48:53.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "MainWindow.axaml",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\MainWindow.axaml",
+              "RelativeToolTip": "MainWindow.axaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAD4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-08T16:09:48.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Compressor.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Compressor.cs",
+              "RelativeDocumentMoniker": "Compressor.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Compressor.cs",
+              "RelativeToolTip": "Compressor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T16:05:33.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Logs.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Logs.cs",
               "RelativeDocumentMoniker": "Logs.cs",
               "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\AutoCompressor\\Logs.cs",
               "RelativeToolTip": "Logs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T16:00:43.575Z",
               "EditorCaption": ""

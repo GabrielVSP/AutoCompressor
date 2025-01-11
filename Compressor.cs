@@ -10,15 +10,14 @@ namespace AutoCompressor
 
         static public void Compress(string inputPath, string outputPath)
         {
-
-            Logs.AddLog("void");
-
+            
             var inputFile = new MediaFile { Filename = inputPath };
             var outputFile = new MediaFile { Filename = outputPath };
             
-
             try
             {
+
+                Logs.AddLog("Started compressing");
 
                 using (var engine = new Engine())
                 {
@@ -34,7 +33,7 @@ namespace AutoCompressor
 
                 }
 
-                Console.WriteLine("Video compressed.");
+                Logs.AddLog("Video has been compressed.");
 
             }
             catch (Exception e)

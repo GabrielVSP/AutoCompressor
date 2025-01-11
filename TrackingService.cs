@@ -3,13 +3,23 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace AutoCompressor
 {
     public class TrackingService : BackgroundService
     {
-        private readonly string folderToTrack = @"C:\videos";
+        
+        private readonly string folderToTrack;
+        private readonly string outputFolder;
         private FileSystemWatcher? watcher;
+
+        public TrackingService(IOptions<AppConfig> config)
+        {
+            var c = AppConfig.Load();
+            folderToTrack = c.inputFolder;
+            outputFolder = c.outputFolder;
+        }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -26,14 +36,14 @@ namespace AutoCompressor
             watcher.Created += OnCreated;
             watcher.EnableRaisingEvents = true;
 
-            Console.WriteLine($"Tracking folder: {folderToTrack}");
+            Logs.AddLog($"Tracking folder: {folderToTrack}");
             return Task.CompletedTask;
         }
 
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"New video added: {e.FullPath}");
-            Compressor.Compress(@$"{e.FullPath}", $@"C:\Users\gabri\Videos\Compressed\compressed_{Path.GetFileName(e.FullPath)}");
+            Logs.AddLog($"New video added: {e.FullPath}");
+            Compressor.Compress(@$"{e.FullPath}", $@"{outputFolder}\compressed_{Path.GetFileName(e.FullPath)}");
         }
 
         public override void Dispose()
