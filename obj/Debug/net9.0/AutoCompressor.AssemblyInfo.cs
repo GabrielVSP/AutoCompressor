@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoCompressor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4671ac8c34d76009b9a079a9ccb25054cbc32dac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd40494be36678ef31ba47e6392c03c78395e9ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoCompressor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoCompressor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
