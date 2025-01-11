@@ -2,16 +2,35 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
         x:Class="AutoCompressor.MainWindow"
         Title="AutoCompressor">
+
+		<Window.Background>
+			<SolidColorBrush Color="#ffffff"/>
+		</Window.Background>
+
+		<Window.Styles>
+			<Style Selector="Button.tabBtn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+				<Setter Property="BorderBrush" Value="Purple" />
+				<Setter Property="Foreground" Value="Purple" />
+			</Style>
+		</Window.Styles>
 	
 		<StackPanel>
 
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
 
-				<Button Content="Logs" HorizontalAlignment="Left" Click="OnChangeTab" />
-				<Button Content="Settings" HorizontalAlignment="Left" Click="OnChangeTab" />
+				<Button Content="Logs" Classes="tabBtn" HorizontalAlignment="Left" Click="OnChangeTab" Width="100" FontSize="20" 
+						Background="Transparent" 
+						Foreground="Black" 
+						BorderBrush="Black" 
+						BorderThickness="0,0,0,2"/>
+				<Button Content="Settings" Classes="tabBtn" HorizontalAlignment="Left" Click="OnChangeTab" Width="100" FontSize="20"
+						Background="Transparent"
+						Foreground="Black"
+						BorderBrush="Black"
+						BorderThickness="0,0,0,2" />
 
 			</StackPanel>
 
@@ -34,14 +53,15 @@
 			<StackPanel Margin="30,0" Spacing="25" x:Name="SettingsTab" IsVisible="False">
 
 				<TextBlock Text="Input folder:" FontSize="14"/>
-				<TextBox x:Name="EntryInputFolder" Watermark="Type the path of input folder"/>
-				<Button Content="Select Input Folder" Click="OnPickInputFolderClicked"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+					<TextBox x:Name="EntryInputFolder" Width="250" Watermark="Type the path of input folder" VerticalAlignment="Center" />
+					<Button Content="Select..." Click="OnPickInputFolderClicked" VerticalAlignment="Center"/>
+				</StackPanel>
 
 				<TextBlock Text="Output folder:" FontSize="14"/>
 				<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">					
-					<TextBox x:Name="EntryOutputFolder" Watermark="Type the path of output folder"/>
-					<Button Content="Select Output Folder" Width="150"
-            Height="40"  Click="OnPickOutputFolderClicked"/>
+					<TextBox x:Name="EntryOutputFolder" Width="250" Watermark="Type the path of output folder" VerticalAlignment="Center" />
+					<Button Content="Select..." Click="OnPickOutputFolderClicked" VerticalAlignment="Center"/>
 				</StackPanel>
 
 				<TextBlock x:Name="lblStatus" Text="Status message here"
