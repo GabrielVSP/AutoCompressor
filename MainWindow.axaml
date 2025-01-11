@@ -60,11 +60,15 @@
 						   HorizontalAlignment="Center"
 						   Margin="0,0,0,20"/>
 
-				<TextBlock x:Name="LogsText"
-						   FontSize="20"
-						   FontWeight="Bold"
-						   HorizontalAlignment="Center"
-						   Margin="0,0,0,20"/>
+				<Border Background="#DCDCDC" Width="450" Padding="5">
+					<TextBlock x:Name="LogsText"
+							   Text="&#xA;"
+								Foreground="Black"
+							   FontSize="15"
+							   FontWeight="Normal"
+							   HorizontalAlignment="Left"
+							   Margin="0,0,0,20"/>
+				</Border>
 				
 			</StackPanel>
 
