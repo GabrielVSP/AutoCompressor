@@ -14,7 +14,7 @@ Auto Compressor is a simple and efficient application that monitors a specific f
 * Add Videos: Once a video is detected in the input folder, it will be compressed and moved to the output folder.
 
 ## 🛠️ Installation
-You can get the newest version at: https://github.com/GabrielVSP/AutoCompressor/releases.
+You can get the latest version at: https://github.com/GabrielVSP/AutoCompressor/releases.
 
 ## ⚙️ How to use
 
